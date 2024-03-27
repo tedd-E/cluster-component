@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-huge
+spec:
+  containers:
+    - name: test-container
+      image: nginx
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - name: config-volume # dependency on chart two here (see spec.volumes)
+          mountPath: /etc/config
+  volumes:
+    - name: config-volume # this part is the dependency
+      configMap:
+        name: chart-two

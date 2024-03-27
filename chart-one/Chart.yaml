@@ -1,0 +1,4 @@
+apiVersion: v2
+name: chart-one
+description: this chart depends on chart two
+version: 0.0.1
