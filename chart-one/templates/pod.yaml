@@ -14,4 +14,4 @@ spec:
   volumes:
     - name: config-volume # this part is the dependency
       configMap:
-        name: chart-two
+        name: test-configmap
